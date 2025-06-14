@@ -1,0 +1,12 @@
+{
+  "name": "crud",
+  "version": "1.0.0",
+  "description": "Basic CRUD",
+  "license": "MIT",
+  "author": "Diego",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
