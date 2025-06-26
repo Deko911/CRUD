@@ -1,12 +1,24 @@
-<form method="post">
-    <label for="name">Nombre</label>
-    <input type="text" name="name">
-
-    <label for="email">Correo electrónico</label>
-    <input type="email" name="email">
-
-    <label for="pass">Contraseña</label>
-    <input type="password" name="pass">
-
+<div class="form">
+  <h1 class="title">Registro</h1>
+  <form method="post">
+    <label for="name">Nombre:</label>
+    <div class="input-group">
+      <div class="svg-input"></div>
+      <input type="text" id="name" autocomplete="cc-name" placeholder="Ingrese nombre" />
+    </div>
+    <br />
+    <label for="email">Correo electrónico:</label>
+    <div class="input-group">
+      <div class="svg-input"></div>
+      <input type="email" id="email" autocomplete="email" placeholder="Ingrese correo" />
+    </div>
+    <br />
+    <label for="pass">Contraseña:</label>
+    <div class="input-group">
+      <div class="svg-input"></div>
+      <input type="password" id="pass" autocomplete="new-password" placeholder="Ingrese contraseña" />
+    </div>
+    <br />
     <button type="submit">Enviar</button>
-</form>
+  </form>
+</div>

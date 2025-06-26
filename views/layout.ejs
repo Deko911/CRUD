@@ -12,10 +12,12 @@
     <nav>
         <div id="logo"><h1>LOGO</h1></div>
         <ul id="menu">
-            <li>Registro</li>
-            <li>Ingreso</li>
-            <li>Inicio</li>
-            <li>Salir</li>
+            <% let options = ["Registro", "Ingreso", "Inicio", "Salir"] %>
+            <% options.forEach(option => { %>
+                <li class="<%= option === title ? "active" : "" %>" >
+                    <a href="/<%= option.toLowerCase() %>"><%= option %></a>
+                </li>
+            <% }) %>
         </ul>
     </nav>
 
