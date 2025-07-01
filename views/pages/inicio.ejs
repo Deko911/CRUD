@@ -1,5 +1,29 @@
-<ol>
-  <% users.forEach(user => { %>
-   <li><%= user.name %></li>
-  <% }) %>
-</ol>
+<table class="table-users">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Fecha de creacion</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% users.forEach((user, i) => { %>
+     <tr>
+      <td><%= i + 1 %></td>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.date %></td>
+      <td class="actions">
+        <div class="svg-action">
+          <a href="#" class="update-button"><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
+        </div>
+        <div class="svg-action">
+          <a href="#" class="delete-button"><i class="fas fa-trash-alt" aria-hidden="true"></i></a>
+        </div>
+      </td>
+     </tr>
+    <% }) %>
+  </tbody>
+</table>

@@ -31,21 +31,21 @@ nav {
     
     li {
         width: 100%;
-        padding: 20px;
-
+        height: 100%;
+        display: inline-grid;
+        box-sizing: initial;
         a {
+            padding: 20px;
+            margin: 5px;
             text-decoration: none;
             color: var(--font-color);
         }
     }
 
-    li.active {
+    li.active a { 
         background-color: var(--font-color);
+        color: aliceblue;
         border-radius: 5px;
-
-        a {
-            color: aliceblue;
-        }
     }
 }
 
@@ -99,6 +99,7 @@ nav {
         }
 
         button {
+            cursor: pointer;
             color: aliceblue;
             padding: .375rem .75rem;
             background-color: var(--font-color);
