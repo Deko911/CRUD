@@ -16,14 +16,14 @@
         <ul id="menu">
             <% let options = ["Registro", "Ingreso", "Inicio", "Salir"] %>
             <% options.forEach(option => { %>
-                <li class="<%= option === title ? "active" : "" %>" >
+                <li class="<%= option === title ? "active" : "" %>" style="<%= option === title ? "view-transition-name: nav;" : "" %>" >
                     <a href="/<%= option.toLowerCase() %>"><%= option %></a>
                 </li>
             <% }) %>
         </ul>
     </nav>
 
-    <section>
+    <section style="view-transition-name: main;">
         <%- include('pages/' + option + '.ejs', {users: users}) -%>
     </section>
 

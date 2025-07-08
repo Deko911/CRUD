@@ -5,6 +5,40 @@
     --font-color: #0D6EFD;
 }
 
+@view-transition{
+    navigation: auto;
+}
+
+::view-transition-group(*) {
+    animation-duration: 0.5s;
+}
+
+::view-transition-old(main) {
+    animation: slide-out-to-left 0.5s forwards;
+}
+
+::view-transition-new(main) {
+    animation: slide-in-from-right 0.5s forwards;
+}
+
+@keyframes slide-out-to-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide-in-from-right {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
 body{
     margin: 0;
 }
