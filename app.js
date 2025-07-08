@@ -1,9 +1,17 @@
 const express = require('express')
+const fs = require('fs')
+const mongoose = require('mongoose')
 const app = express()
 
-const fs = require('fs')
+const config = require('./utils/config')
 const user = require('./controllers/user')
 const users = require('./models/users')
+
+mongoose.connect(config.MONGO_URL).then(() => {
+  console.log('Conectado a mongo')
+}).catch(error => {
+  console.log(error)
+})
 
 // Motor de vistas para el template engine
 app.set('view engine', 'ejs')

@@ -1,15 +1,18 @@
 const express = require('express')
-const users = require('../models/users')
+const User = require('../models/users')
 const router = express.Router()
 
 router.use(express.json())
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
+  const users = await User.find()
   res.json(users)
 })
 
-router.post('/', (req, res) => {
-  res.send(req.body)
+router.post('/', async (req, res) => {
+  const user = new User({ ...req.body })
+  const result = await user.save()
+  res.json(result)
 })
 
 router.post('/register', (req, res) => {})
